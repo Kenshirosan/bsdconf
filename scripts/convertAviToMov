@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for f in *.avi
+do
+	echo "converting file - $f"
+	ffmpeg -i "$f" "${f%.*}.mov"
+	echo "created file ${f%.*}.mov
+done

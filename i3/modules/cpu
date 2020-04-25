@@ -1,0 +1,10 @@
+#!/bin/sh
+
+color=#00ff00
+sign=
+power=$(sysctl -n dev.cpu.0.freq)
+
+output=$(($power / 34 / 10))
+
+head -c $output < /dev/zero | tr '\0' $sign
+

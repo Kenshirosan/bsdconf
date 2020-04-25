@@ -1,0 +1,6 @@
+#!/usr/local/bin/bash
+
+DEST=~/testdir
+SOURCE=~/wallpapers2
+
+find . -type f -exec cp {} $DEST \;

@@ -1,0 +1,67 @@
+bsdinfo
+setenv PATH /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin:$HOME/Downloads/usr/assembler/usr/hla:$HOME/.config/composer/vendor
+setenv  EDITOR  vim
+setenv  PAGER   less
+
+/usr/bin/fortune freebsd-tips
+
+ alias h='fc -l'
+ alias j jobs
+ alias m "$PAGER"
+ alias ll 'ls -laFo'
+ alias l 'ls -l'
+ alias g 'egrep -i'
+ alias r ranger
+ # # be paranoid
+ alias cp 'cp -ip'
+ alias mv 'mv -i'
+ alias rm 'rm -i'
+ alias ins 'sudo pkg install'
+ alias r ranger
+ alias art 'php artisan serve'
+
+setenv QT_QPA_PLATFORMTHEME qt5ct
+if ($?prompt) then
+
+    set autoexpand
+    set color
+    set colorcat
+    set filec
+    set autolist     = ambiguous
+    set correct     = cmd
+    set history     = 2048
+    set histfile     = ~/.tcsh_history
+    set mail     = (/var/mail/$USER)
+    set savehist    = 2048
+
+    set autorehash     = always
+
+    set     red="%{\033[1;31m%}"
+    set   green="%{\033[0;40m%}"
+    set  yellow="%{\033[1;33m%}"
+    set    blue="%{\033[1;34m%}"
+    set magenta="%{\033[1;35m%}"
+    set    cyan="%{\033[1;36m%}"
+    set   white="%{\033[0;37m%}"
+    set     end="%{\033[0m%}"
+
+        if ( $tty =~ ttyv* ) then
+
+            if ( $USER == root ) then
+                set prompt = "\n${blue}%~ ${red}%N@%m: \n>>>${end} "
+            else
+                set prompt = "\n${green}%~ ${blue}%m: \n>>>${end} "
+            endif
+
+        else
+
+            if ( $USER == root ) then
+                set prompt = "\n${blue}%~ ${red}%N@%m: \n❱❱❱${end} "
+            else
+		set prompt="${green}%n${cyan}@%m ${magenta}%~❱❱❱ ${red}${end} "
+
+            endif
+
+        endif
+
+    unset grey red green yellow blue magenta cyan white end

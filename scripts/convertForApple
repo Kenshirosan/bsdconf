@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for f in *.avi
+do
+	echo "converting file - $f"
+	arista-transcode -p ipad -d apple "$f"
+	echo "created file ${f%.*}.m4v"
+done

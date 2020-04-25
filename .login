@@ -1,0 +1,14 @@
+# $FreeBSD: releng/12.1/share/skel/dot.login 320672 2017-07-05 13:08:07Z trasz $
+#
+# .login - csh login script, read by login shell, after `.cshrc' at login.
+#
+# See also csh(1), environ(7).
+#
+# Query terminal size; useful for serial lines.
+if ( -x /usr/bin/resizewin ) /usr/bin/resizewin -z
+
+# Display a random cookie on each login.
+if ( -x /usr/bin/fortune ) /usr/bin/fortune freebsd-tips
+set hlainc = ($HOME/Downloads/usr/hla/include)
+set hlalib = ($HOME/Downloads/usr/hla/hlalib)
+set path = ($path $HOME/.config/composer/vendor/bin $HOME/Downloads/usr/hla .)
