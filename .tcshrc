@@ -5,20 +5,29 @@ setenv  PAGER   less
 
 /usr/bin/fortune freebsd-tips
 
- alias h='fc -l'
- alias j jobs
- alias m "$PAGER"
- alias ll 'ls -laFo'
- alias l 'ls -l'
- alias g 'egrep -i'
- alias r ranger
- # # be paranoid
- alias cp 'cp -ip'
- alias mv 'mv -i'
- alias rm 'rm -i'
- alias ins 'sudo pkg install'
- alias r ranger
- alias art 'php artisan serve'
+
+setenv XIM ibus
+setenv GTK_IM_MODULE ibus
+setenv QT_IM_MODULE ibus
+setenv XMODIFIERS @im=ibus
+setenv XIM_PROGRAM ibus-daemon
+setenv XIM_ARGS "--daemonize --xim"
+
+
+alias h='fc -l'
+alias j jobs
+alias m "$PAGER"
+alias ll 'ls -laFo'
+alias l 'ls -l'
+alias g 'egrep -i'
+alias r ranger
+# # be paranoid
+alias cp 'cp -ip'
+alias mv 'mv -i'
+alias rm 'rm -i'
+alias ins 'sudo pkg install'
+alias r ranger
+alias art 'php artisan serve'
 
 setenv QT_QPA_PLATFORMTHEME qt5ct
 if ($?prompt) then
