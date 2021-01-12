@@ -501,13 +501,13 @@ debug:
   # Log level
   #
   # Values for `log_level`:
-  #   - None
-  #   - Error
-  #   - Warn
-  #   - Info
-  #   - Debug
-  #   - Trace
-  log_level: None
+  #   - OFF
+  #   - ERROR
+  #   - WARN
+  #   - INFO
+  #   - DEBUG
+  #   - TRACE
+  log_level: OFF
 
   # Print all received window events.
   print_events: false
