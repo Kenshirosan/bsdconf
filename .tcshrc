@@ -28,7 +28,10 @@ alias rm 'rm -i'
 alias ins 'sudo pkg install'
 alias r ranger
 alias art 'php artisan serve'
-
+alias migrate 'php artisan migrate'
+alias npmw 'npm run watch'
+alias npmd 'npm run dev'
+alias server 'echo qUbmYjrvbK25 && ssh freebsd@51.210.40.187'
 setenv QT_QPA_PLATFORMTHEME qt5ct
 if ($?prompt) then
 
